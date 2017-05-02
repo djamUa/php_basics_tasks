@@ -1,20 +1,19 @@
 <?php
+//Написать калькулятор. Переменная $a = изменяемое число. Переменная $b = изменяемое число. Переменная $operator = ‘+’ или ‘-’ или ‘/’ или ‘*’ или '%' (остаток от деления).
+//На экран выводить результат в зависимости от значений этих переменных. Не забудьте про деление на 0, если надо - выдавать ошибку что на 0 делить нельзя.
 
-$a = $_POST ['a'];
-$b = $_POST ['b'];
-$operator = $_POST ['operator'];
-//echo $a;
-//echo $b;
-//echo $operator;
+$a=100;
+$b=100;
+$operator='/';
 if ($b==0 and $operator=='/'){
     echo "на 0 делить нельзя";
-}else {
-    if ($operator == '+') {$result=$a + $b; }
+} else {
+    if ($operator == '+') {$result=$a + $b;}
     if ($operator == '-') {$result=$a - $b;}
-    if ($operator =='/')  {$result=$a / $b;}
+    if ($operator == '/') {$result=$a / $b;}
     if ($operator == '*') {$result=$a * $b;}
     if ($operator == '%') {$result=$a % $b;}
-    echo $a .$operator .$b .'='  .$result;
+    echo $result;
 }
 
 ?>
